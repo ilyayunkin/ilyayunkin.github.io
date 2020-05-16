@@ -62,7 +62,7 @@ function updateScores(){
     document.cookie = "qCnt=" + qCnt;
 }
 
-console.log("Version : 0.000.00001");
+console.log("Version : 0.000.00002");
 console.log("Words count : " + words.length);
 changeQuestion();
 
@@ -129,12 +129,14 @@ function pronounce( word){
     for(i = 0; i < voices.length ; i++) {
         if(voices[i].name === selectedOption) {
             utterThis.voice = voices[i];
+			utterThis.lang = voices[i].lang;
             break;
         }
     }
     utterThis.pitch = pitch.value;
     utterThis.rate = rate.value;
-    synth.speak(utterThis);
+    console.log(utterThis);
+	synth.speak(utterThis);
     //}
 }
 
