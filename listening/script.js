@@ -56,8 +56,7 @@ function changeQuestion() {
 }
 
 function updateScores(){
-    score.innerHTML='<div id="score" align="center">'+ rCnt + '/' + qCnt + '</div>';
-    console.log(score.innerHTML);
+    score.innerText = rCnt + '/' + qCnt;
     document.cookie = "rCnt=" + rCnt;
     document.cookie = "qCnt=" + qCnt;
 }
