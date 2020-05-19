@@ -8,6 +8,7 @@ var inputForm = document.querySelector('form');
 var inputTxt = document.querySelector('#answerEdit');
 var voiceSelect = document.querySelector('select');
 var score = document.querySelector('#score');
+var versionFooter = document.querySelector('#version-footer');
 
 var pitch = document.querySelector('#pitch');
 var pitchValue = document.querySelector('.pitch-value');
@@ -61,7 +62,10 @@ function updateScores(){
     document.cookie = "qCnt=" + qCnt;
 }
 
-console.log("Version : 0.000.00002");
+const version = "0.000.00003";
+versionFooter.innerText = version;
+console.log(`Version : ${version}`);
+console.log(version);
 console.log("Words count : " + words.length);
 changeQuestion();
 

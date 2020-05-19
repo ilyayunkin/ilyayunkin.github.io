@@ -72,3 +72,9 @@ label {
 .controls button {
   padding: 10px;
 }
+
+#version-footer {
+  text-align: center;
+  margin: auto;
+  padding: auto;
+}
