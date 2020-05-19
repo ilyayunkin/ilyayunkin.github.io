@@ -64,7 +64,7 @@ function updateScores(){
     document.cookie = "qCnt=" + qCnt;
 }
 
-const version = "0.000.00005";
+const version = "0.000.00006";
 versionFooter.innerText = version;
 console.log(`Version : ${version}`);
 console.log(version);
