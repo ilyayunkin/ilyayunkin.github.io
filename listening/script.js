@@ -64,7 +64,7 @@ function updateScores(){
     document.cookie = "qCnt=" + qCnt;
 }
 
-const version = "0.000.00004";
+const version = "0.000.00005";
 versionFooter.innerText = version;
 console.log(`Version : ${version}`);
 console.log(version);
@@ -147,6 +147,7 @@ function pronounce( word){
 
 function speak(){
     pronounce(question);
+    inputTxt.focus();
 }
 
 function check(){
@@ -180,6 +181,7 @@ inputForm.onsubmit = function(event) {
     event.preventDefault();
 
     check();
+    inputTxt.focus();
 }
 
 pitch.onchange = function() {
