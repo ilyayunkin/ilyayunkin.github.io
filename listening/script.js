@@ -34,19 +34,19 @@ function getRandUInt(max)
 }
 
 function changeQuestion() {
-    var numEn = numsC.checked;
-    var wordEn = wordsC.checked;
+    let numEn = numsC.checked;
+    let wordEn = wordsC.checked;
 
-    var anyEn = numEn || wordEn;
-    var en = [numEn, wordEn];
+    let anyEn = numEn || wordEn;
+    let en = [numEn, wordEn];
     do{
         questionN = (questionN + 1) % 2;
         console.log("questionN: " + questionN);
         if(questionN === NUMBER){
-            var num = getRandUInt(9999999);
+            let num = getRandUInt(9999999);
             question = num;
         }else{
-            var word = words[getRandUInt(words.length)];
+            let word = words[getRandUInt(words.length)];
             question = word;
         }
     }while(anyEn && (!en[questionN]));
@@ -85,10 +85,10 @@ function populateVoiceList() {
         else if ( aname == bname ) return 0;
         else return +1;
     });
-    var selectedIndex = voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
+    let selectedIndex = voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
     voiceSelect.innerHTML = '';
     for(i = 0; i < voices.length ; i++) {
-        var option = document.createElement('option');
+        let option = document.createElement('option');
         if(voices[i].lang.includes("en")){
             option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
 
@@ -117,7 +117,7 @@ function pronounce( word){
     //    }
     //if (inputTxt.value !== '') {
     //var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-    var utterThis = new SpeechSynthesisUtterance(word);
+    let utterThis = new SpeechSynthesisUtterance(word);
     utterThis.onend = function (event) {
         console.log('SpeechSynthesisUtterance.onend');
     }
@@ -125,7 +125,7 @@ function pronounce( word){
         console.error('SpeechSynthesisUtterance.onerror');
     }
 
-    var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+    let selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
     for(i = 0; i < voices.length ; i++) {
         if(voices[i].name === selectedOption) {
             utterThis.voice = voices[i];
@@ -145,7 +145,7 @@ function speak(){
 }
 
 function check(){
-    var answer = inputTxt.value.toLowerCase().trim();
+    let answer = inputTxt.value.toLowerCase().trim();
     console.log("Answer: " + answer);
     if((answer != "") && (answer != null))
     {
