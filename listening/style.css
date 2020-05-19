@@ -75,6 +75,9 @@ label {
 
 #version-footer {
   text-align: center;
-  margin: auto;
-  padding: auto;
+}
+
+#error {
+  text-align: center;
+  color: red;
 }

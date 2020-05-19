@@ -9,6 +9,8 @@ var inputTxt = document.querySelector('#answerEdit');
 var voiceSelect = document.querySelector('select');
 var score = document.querySelector('#score');
 var versionFooter = document.querySelector('#version-footer');
+var errorBar = document.querySelector('#error');
+
 
 var pitch = document.querySelector('#pitch');
 var pitchValue = document.querySelector('.pitch-value');
@@ -62,7 +64,7 @@ function updateScores(){
     document.cookie = "qCnt=" + qCnt;
 }
 
-const version = "0.000.00003";
+const version = "0.000.00004";
 versionFooter.innerText = version;
 console.log(`Version : ${version}`);
 console.log(version);
@@ -158,7 +160,9 @@ function check(){
             ++rCnt;
         }else{
             pronounce("Wrong");
-            alert(question);
+            //alert(question);
+            errorBar.innerText = question;
+            setTimeout(() => errorBar.innerText = '', 3000);
         }
         qCnt++;
         if(randVoiceC.checked){
