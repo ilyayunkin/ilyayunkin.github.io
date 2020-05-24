@@ -11,11 +11,21 @@
 			background-color:black;
 			color:white;
 			padding:10px;
+			margin: 0
 		}
 
-		#main-footer{
-			text-align: center;
-			font-size:8px;
+		nav {
+			text-align:center;
+			background-color:black;
+
+			color:white;
+			padding:10px;
+		}
+		nav a:link,
+		nav a:visited,
+		nav a:hover,
+		nav a:active{
+			color:white;
 		}
 
 		.post {
@@ -45,92 +55,97 @@
 
 <body>
 	<header>
-		<h1 id = "main-header">Projects list</h1>
+		<h1 id = "main-header">Pet-projects list</h1>
+		<nav>
+			<a href="#translations">Translations</a>
+			<a href="#native-language">Native language</a>
+			<a href="#web-based">Web-based</a>
+		</nav>
 	</header>
-	<section>
-		<h2 id = "translations-header">Translations</h2>
-		<article class="post">
-			<h3 id = "cpp-header">C++ programming language</h3>
-			<ul>
-				<li>
-					<a href="https://github.com/ilyayunkin/LibsInteroperability/blob/master/README.md">
-						Взаимодействие библиотек, созданных разными компиляторами
+	<main>
+		<section>
+			<h2 id = "translations">Translations</h2>
+			<article class="post">
+				<h3 id = "cpp-header">C++ programming language</h3>
+				<ul>
+					<li>
+						<a href="https://github.com/ilyayunkin/LibsInteroperability/blob/master/README.md">
+							Взаимодействие библиотек, созданных разными компиляторами
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/ilyayunkin/LibsInteroperability/blob/master/BinaryCompatibleCpp.md">
+							Бинарно-совместимые интерфейсы на языке C++
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/ilyayunkin/Exceptions-and-Error-Handling">
+							Обработка ошибок и исключений на языке C++
+						</a>					
+					</li>
+				</ul>								
+			</article>
+		</section>
+		
+		<section>
+			<h2 id = "native-language">Native language tools</h2>
+
+			<article class="post">
+				<h3 id = "listening-header">ListeningPractice</h3>
+				<p id="listening">
+					<img id="img-listening" alt="Listening" height="180" src="https://github.com/ilyayunkin/ListeningPractice/blob/master/screenshots/1.png?raw=true">
+				</p>
+				<p>
+					<a href="https://github.com/ilyayunkin/ListeningPractice">
+						src
 					</a>
-				</li>
-				<li>
-					<a href="https://github.com/ilyayunkin/LibsInteroperability/blob/master/BinaryCompatibleCpp.md">
-						Бинарно-совместимые интерфейсы на языке C++
+				</p>
+			</article>	
+
+			<article class="post">
+				<h3 id = "qyandex-header">QYandexTranslate</h3>
+				<p id="qyandex">
+					<img id="img-qyandex" alt="Screen" height="180" src="https://github.com/ilyayunkin/QYandexTranslate/raw/master/img/screen1.png">
+				</p>   
+				<p class="links">
+					<a href="https://github.com/ilyayunkin/QYandexTranslate">
+						src
 					</a>
-				</li>
-				<li>
-					<a href="https://github.com/ilyayunkin/Exceptions-and-Error-Handling">
-						Обработка ошибок и исключений на языке C++
-					</a>					
-				</li>
-			</ul>								
-		</article>
-	</section>
-	
-	<section>
-		<h2 id = "language-header">Native language tools</h2>
+					<a href="https://github.com/ilyayunkin/QYandexTranslate/releases/latest">
+						win
+					</a>
+				</p>
+			</article>	
 
-		<article class="post">
-			<h3 id = "listening-header">ListeningPractice</h3>
-			<p id="listening">
-				<img id="img-listening" alt="Listening" height="180" src="https://github.com/ilyayunkin/ListeningPractice/blob/master/screenshots/1.png?raw=true">
-			</p>
-			<p>
-				<a href="https://github.com/ilyayunkin/ListeningPractice">
-					src
+			<article class="post">
+				<h3 id = "herokana-header">HeroKana</h3>
+				<p id="herokana">
+					<img id="img-herokana1" alt="Hiragana recognition" height="300" src="https://github.com/ilyayunkin/HeroKana/raw/master/img/hiragana.png">
+					<img id="img-herokana2" alt="Katakana recognition" height="300" src="https://github.com/ilyayunkin/HeroKana/raw/master/img/katakana.png">
+					<img id="img-herokana3" alt="Reading" height="300" src="https://github.com/ilyayunkin/HeroKana/raw/master/img/texttransformation.png">
+				</p>
+				<p>
+					<a href="https://github.com/ilyayunkin/HeroKana">
+						src
+					</a>
+				</p>
+			</article>	
+		</section>
+
+		<section>
+			<h2 id = "web-based">Web-based applications</h2>
+			<article class="post">
+				<h3 id = "web-listening-header">Web-based English listening practice</h3>
+				<img id="img-web-pract" alt="Web Listening practice" height="300" src="img/web-pract.png">
+				<br>
+				<a href="listening/">
+					Run
 				</a>
-			</p>
-		</article>	
 
-		<article class="post">
-			<h3 id = "qyandex-header">QYandexTranslate</h3>
-			<p id="qyandex">
-				<img id="img-qyandex" alt="Screen" height="180" src="https://github.com/ilyayunkin/QYandexTranslate/raw/master/img/screen1.png">
-			</p>   
-			<p class="links">
-				<a href="https://github.com/ilyayunkin/QYandexTranslate">
-					src
-				</a>
-				<a href="https://github.com/ilyayunkin/QYandexTranslate/releases/latest">
-					win
-				</a>
-			</p>
-		</article>	
-
-		<article class="post">
-			<h3 id = "herokana-header">HeroKana</h3>
-			<p id="herokana">
-				<img id="img-herokana1" alt="Hiragana recognition" height="300" src="https://github.com/ilyayunkin/HeroKana/raw/master/img/hiragana.png">
-				<img id="img-herokana2" alt="Katakana recognition" height="300" src="https://github.com/ilyayunkin/HeroKana/raw/master/img/katakana.png">
-				<img id="img-herokana3" alt="Reading" height="300" src="https://github.com/ilyayunkin/HeroKana/raw/master/img/texttransformation.png">
-			</p>
-			<p>
-				<a href="https://github.com/ilyayunkin/HeroKana">
-					src
-				</a>
-			</p>
-		</article>	
-	</section>
-
-	<section>
-		<h2 id = "web-header">Web-based applications</h2>
-		<article class="post">
-			<h3 id = "web-listening-header">Web-based English listening practice</h3>
-			<img id="img-web-pract" alt="Web Listening practice" height="300" src="img/web-pract.png">
-			<br>
-			<a href="listening/">
-				Run
-			</a>
-
-		</article>
-	</section>
-
+			</article>
+		</section>
+	</main>
 	<footer id="main-footer">
-		<p>...</p>
 	</footer>	
 </body>
 </html>
